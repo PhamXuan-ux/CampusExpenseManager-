@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# Campus Expense Manager
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Ứng dụng quản lý chi tiêu dành cho sinh viên với kiến trúc monorepo.
 
-## Get started
+## 📁 Cấu trúc dự án
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+CampusExpenseManager/
+├── mobile-app/                    # React Native mobile application
+│   └── src/
+│       ├── assets/                # Static assets (images, fonts, icons)
+│       ├── components/            # Reusable UI components
+│       ├── constants/             # App-wide constants
+│       ├── navigation/            # Navigation logic and navigators
+│       ├── screens/               # Main screen components
+│       ├── services/              # API calls and data fetching logic
+│       ├── store/                 # State management
+│       ├── types/                 # TypeScript interface definitions
+│       ├── helpers/               # Pure utility functions
+│       ├── App.js                 # Main application entry point
+│       └── index.js               # Entry point per React Native standards
+│
+├── server/                        # Express.js backend server
+│   └── src/
+│       ├── config/                # Configuration files
+│       ├── controllers/           # Request handlers
+│       ├── middleware/            # Express middleware
+│       ├── models/                # Database models/schemas
+│       ├── routes/                # API routes definitions
+│       ├── services/              # Business logic
+│       ├── helper/                # Helper functions
+│       └── app.js                 # Main server entry file
+│
+├── package.json                   # Root package.json (npm workspaces)
+├── .gitignore
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Getting Started
 
-## Learn more
+### Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js >= 18.0.0
+- npm or yarn
+- Expo CLI (for mobile development)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Installation
 
-## Join the community
+```bash
+# Install all dependencies (root, mobile-app, server)
+npm run install:all
+```
 
-Join our community of developers creating universal apps.
+### Development
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+#### Mobile App
+
+```bash
+# Start Expo development server
+npm run mobile:start
+
+# Start on Android emulator
+npm run mobile:android
+
+# Start on iOS simulator
+npm run mobile:ios
+
+# Start web version
+npm run mobile:web
+```
+
+#### Server
+
+```bash
+# Start server in production mode
+npm run server:start
+
+# Start server with hot reload (development)
+npm run server:dev
+```
+
+## 🛠 Tech Stack
+
+### Mobile App
+
+- React Native with Expo
+- Expo Router for navigation
+- TypeScript
+
+### Server
+
+- node js
+- MySQL
+
+## 📝 License
+
+ISC

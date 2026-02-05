@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "CampusExpenseManager",
+    "slug": "CampusExpenseManager",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "campusexpensemanager",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "sdkVersion": "54.0.0"
+  }
+}
